@@ -1,0 +1,96 @@
+<html>
+<head>
+
+<style type="text/css">
+    /* Loader container div */
+    .loader-container {
+        margin: 0 auto;
+        width: 110px;
+        height: 148px;
+        padding: 5px;
+    }
+
+    /* Bottom margin of every row (except last) */
+    .box_11, .box_12, .box_13, .box_21, .box_22, .box_23, .box_31, .box_32, .box_33 {
+        margin-bottom: 5px;
+    }
+
+    /* Right margin of every column (except last) */
+    .box_11, .box_12, .box_21, .box_22, .box_31, .box_32, .box_41, .box_42 {
+        margin-right: 5px;
+    }
+
+    /* Default properties of all boxes */
+    .box_11, .box_12, .box_13,
+    .box_21, .box_22, .box_23,
+    .box_31, .box_32, .box_33,
+    .box_41, .box_42, .box_43 {
+        display: inline-block;
+        width: 30px;
+        height: 30px;
+        border-radius: 4px 4px 4px 4px;
+        opacity: 0;
+
+        -webkit-animation: fadeinbox 2s infinite; /* Chrome, Safari, Opera */
+        animation: fadeinbox 2s infinite, ;
+    }
+
+    /* 4 box color types */
+    .orange-box { background-color: #f15b2a; }
+    .blue-box { background-color: #29aae1; }
+    .green-box { background-color: #2db674; }
+    .yellow-box { background-color: #e7b72b; }
+
+    /* Specific border radius values for corner boxes */
+    .box-top-left { border-radius: 12px 4px 4px 4px; }
+    .box-top-right { border-radius: 4px 12px 4px 4px; }
+    .box-bottom-left { border-radius: 4px 4px 4px 12px; }
+    .box-bottom-right { border-radius: 4px 4px 12px 4px; }
+
+    .box_41 { -webkit-animation-delay: 1.2s; animation-delay: 1.2s; }
+    .box_42 { -webkit-animation-delay: 1.4s; animation-delay: 1.4s; }
+    .box_43 { -webkit-animation-delay: 1.6s; animation-delay: 1.6s; }
+    .box_31 { -webkit-animation-delay: 1.8s; animation-delay: 1.8s; }
+    .box_32 { -webkit-animation-delay: 2.0s; animation-delay: 2.0s; }
+    .box_33 { -webkit-animation-delay: 2.2s; animation-delay: 2.2s; }
+    .box_21 { -webkit-animation-delay: 2.4s; animation-delay: 2.4s; }
+    .box_22 { -webkit-animation-delay: 2.6s; animation-delay: 2.6s; }
+    .box_23 { -webkit-animation-delay: 2.8s; animation-delay: 2.8s; }
+    .box_11 { -webkit-animation-delay: 3.0s; animation-delay: 3.0s; }
+    .box_12 { -webkit-animation-delay: 3.2s; animation-delay: 3.2s; }
+    .box_13 { -webkit-animation-delay: 3.4s; animation-delay: 3.4s; }
+
+    /* Animation */
+
+    @-webkit-keyframes fadeinbox { /* Chrome, Safari, Opera */
+        0%      {opacity: 0;}
+        50%     {opacity: 1;}
+        100%    {opacity: 0;}
+    }
+
+    @keyframes fadeinbox { /* Standard */
+        0%      {opacity: 0;}
+        50%     {opacity: 1;}
+        100%    {opacity: 0;}
+    }
+
+</style>
+
+</head>
+<body>
+    <div class="loader-container">
+        <span class="box_11 orange-box box-top-left"></span>
+        <span class="box_12 blue-box"></span>
+        <span class="box_13 green-box box-top-right"></span>
+        <span class="box_21 green-box"></span>
+        <span class="box_22 yellow-box"></span>
+        <span class="box_23 orange-box"></span>
+        <span class="box_31 yellow-box"></span>
+        <span class="box_32 orange-box"></span>
+        <span class="box_33 green-box"></span>
+        <span class="box_41 green-box box-bottom-left"></span>
+        <span class="box_42 blue-box"></span>
+        <span class="box_43 orange-box box-bottom-right"></span>
+    </div>
+</body>
+</html>
